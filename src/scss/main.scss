@@ -1,3 +1,65 @@
+@import 'mixins';
+
+$ui-01: #2d3f49;
+$text-01: #fff;
+
+$spacing: 1rem;
+$width--mobile: 15rem;
+
 * {
-  color: red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  height: 100vh;
+  color: blue;
+  padding: $spacing 0;
+}
+
+.body-text {
+  @include font--body;
+  display: inline-block;
+  width: $width--mobile;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: $spacing;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 25vh;
+  padding: $spacing;
+}
+
+.section--contact .body-text {
+  text-align: center;
+}
+
+.heading {
+  @include font--heading;
+  font-size: 2rem;
+  margin-bottom: $spacing * 1.5;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  width: $width--mobile;
+  margin-top: $spacing;
+}
+
+.icon {
+  fill: blue;
+  width: 1.75rem;
+  height: 1.75rem;
 }

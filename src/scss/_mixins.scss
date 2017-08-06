@@ -1,0 +1,15 @@
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font--heading {
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+@mixin font--body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+}

@@ -1,5 +1,76 @@
 * {
-  color: red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  height: 100vh;
+  color: blue;
+  padding: 1rem 0;
+}
+
+.body-text {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  display: inline-block;
+  width: 15rem;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 25vh;
+  padding: 1rem;
+}
+
+.section--contact .body-text {
+  text-align: center;
+}
+
+.heading {
+  font-family: 'Inconsolata', monospace;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15rem;
+  margin-top: 1rem;
+}
+
+.icon {
+  fill: blue;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 /*# sourceMappingURL=main.css.map */
