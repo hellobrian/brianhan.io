@@ -13,6 +13,11 @@ $width--mobile: 15rem;
 }
 
 .layout {
+  border: 4px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   color: blue;
   padding: $spacing 0;
