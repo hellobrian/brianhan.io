@@ -5,8 +5,8 @@
 
 @mixin font--heading {
   font-family: 'Inconsolata', monospace;
-  letter-spacing: -2px;
-  line-height: 1.5;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
 @mixin font--body {
