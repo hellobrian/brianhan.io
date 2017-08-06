@@ -4,10 +4,6 @@ $spacing: 1rem;
 $width--mobile: 15rem;
 
 .layout {
-  // border: 4px solid blue;
-  // min-height: 100vh;
-  // color: blue;
-  // overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,12 +12,8 @@ $width--mobile: 15rem;
 }
 
 .body-text {
-  // display: inline-block;
-  // font-size: 1.15rem;
-  // line-height: 1.2;
   @include font--body;
   @include font-smoothing;
-  // @include font--heading;
   width: $width--mobile;
   margin-bottom: $spacing;
 }
