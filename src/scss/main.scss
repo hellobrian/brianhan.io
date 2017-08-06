@@ -1,3 +1,22 @@
+@import 'mixins';
 * {
-  color: red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  @include font--heading;
+  font-size: 3rem;
+}
+
+p {
+  @include font--body;
+  font-size: 1.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
 }
