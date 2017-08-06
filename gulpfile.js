@@ -19,12 +19,6 @@ gulp.task('sass:build', () => {
     .pipe(browserSync.stream());
 });
 
-// gulp.task('sass:watch', ['sass:build'], () => {
-//   gulp.watch('src/**/*.scss', ['sass:build']);
-// });
-
-// gulp.task('sass', ['sass:watch', 'sass:build']);
-
 gulp.task('serve', ['sass:build'], () => {
   browserSync.init({
     server: '.',

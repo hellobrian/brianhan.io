@@ -1,41 +1,29 @@
 @import 'mixins';
 
-$ui-01: #2d3f49;
-$text-01: #fff;
-
 $spacing: 1rem;
 $width--mobile: 15rem;
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .layout {
-  border: 4px solid blue;
+  // border: 4px solid blue;
+  // min-height: 100vh;
+  // color: blue;
+  // overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  color: blue;
   padding: $spacing 0;
-  overflow: scroll;
 }
 
 .body-text {
+  // display: inline-block;
+  // font-size: 1.15rem;
+  // line-height: 1.2;
   @include font--body;
-  display: inline-block;
+  @include font-smoothing;
+  // @include font--heading;
   width: $width--mobile;
-  font-size: 1.15rem;
-  line-height: 1.2;
   margin-bottom: $spacing;
-}
-
-.link {
-  text-decoration: none;
-  font-weight: 700;
 }
 
 .section {
@@ -43,7 +31,6 @@ $width--mobile: 15rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // min-height: 25vh;
   padding: $spacing;
 }
 
@@ -52,6 +39,7 @@ $width--mobile: 15rem;
 }
 
 .heading {
+  @include font-smoothing;
   @include font--heading;
   font-size: 2rem;
   margin-bottom: $spacing * 1.5;
@@ -70,10 +58,4 @@ $width--mobile: 15rem;
   justify-content: space-between;
   width: $width--mobile;
   margin-top: $spacing;
-}
-
-.icon {
-  fill: blue;
-  width: 1.75rem;
-  height: 1.75rem;
 }
