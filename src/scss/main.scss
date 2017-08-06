@@ -18,9 +18,10 @@ $width--mobile: 15rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   color: blue;
   padding: $spacing 0;
+  overflow: scroll;
 }
 
 .body-text {
@@ -42,7 +43,7 @@ $width--mobile: 15rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 25vh;
+  // min-height: 25vh;
   padding: $spacing;
 }
 
@@ -54,6 +55,14 @@ $width--mobile: 15rem;
   @include font--heading;
   font-size: 2rem;
   margin-bottom: $spacing * 1.5;
+
+  @media (min-width: 768px) {
+    border: 2px solid blue;
+    padding-top: $spacing * .5;
+    padding-bottom: $spacing * .5;
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
 }
 
 .icon-container {

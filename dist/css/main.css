@@ -20,9 +20,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   color: blue;
   padding: 1rem 0;
+  overflow: scroll;
 }
 
 .body-text {
@@ -54,7 +55,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 25vh;
   padding: 1rem;
 }
 
@@ -68,6 +68,16 @@
   line-height: 1;
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    border: 2px solid blue;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .icon-container {
