@@ -19,18 +19,20 @@ class Icon extends Component {
     viewBox: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     pathData: PropTypes.string,
     iconName: PropTypes.string,
+    fill: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     title: 'icon',
     description: '',
     viewBox: '0 0 32 32',
-    width: 32,
-    height: 32,
+    width: '1.75rem',
+    height: '1.75rem',
+    fill: 'blue',
   };
 
   renderPath = iconName => {
@@ -38,10 +40,19 @@ class Icon extends Component {
   };
 
   render() {
-    const { viewBox, width, height, title, description, iconName, ...other } = this.props;
+    const {
+      fill,
+      viewBox,
+      width,
+      height,
+      title,
+      description,
+      iconName,
+      ...other
+    } = this.props;
 
     return (
-      <svg {...other} viewBox={viewBox} width={width} height={height}>
+      <svg fill={fill} {...other} viewBox={viewBox} width={width} height={height}>
         <title>
           {title}
         </title>

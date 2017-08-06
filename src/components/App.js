@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Icon from './Icon';
+import InlineLink from './InlineLink';
 
 class App extends Component {
   state = {
@@ -17,13 +18,10 @@ class App extends Component {
             <h1 className="heading">Brian Han</h1>
             <p className="body-text">
               Front-end developer at{' '}
-              <a className="link" href="https://console.bluemix.net/">
-                IBM Bluemix
-              </a>{' '}
-              and{' '}
-              <a className="link" href="http://carbondesignsystem.com/">
+              <InlineLink href="https://console.bluemix.net/">IBM Bluemix</InlineLink> and{' '}
+              <InlineLink href="http://carbondesignsystem.com/">
                 Carbon Design System
-              </a>.
+              </InlineLink>.
             </p>
             <p className="body-text">Based in Austin, TX.</p>
           </section>

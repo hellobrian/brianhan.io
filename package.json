@@ -31,6 +31,8 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
+    "glamor": "^2.20.39",
+    "glamorous": "^4.1.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
