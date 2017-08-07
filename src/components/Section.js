@@ -2,31 +2,32 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-const Paragraph = glamorous.p({
-  display: 'inline-block',
-  fontSize: '1.15rem',
-  lineHeight: 1.2,
+const StyledSection = glamorous.section({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
 });
 
-class Text extends Component {
+class Section extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
   };
 
   static defaultProps = {
-    className: 'body-text',
+    className: 'section',
   };
 
   render() {
     const { className, children, ...other } = this.props;
 
     return (
-      <Paragraph className={className} {...other}>
+      <StyledSection className={`section ${className}`} {...other}>
         {children}
-      </Paragraph>
+      </StyledSection>
     );
   }
 }
 
-export default Text;
+export default Section;

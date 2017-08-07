@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Icon from './Icon';
 import InlineLink from './InlineLink';
+import Text from './Text';
+import Section from './Section';
 
 class App extends Component {
   state = {
@@ -14,21 +16,21 @@ class App extends Component {
     return this.state.isLoading
       ? <div>Loading...</div>
       : <div>
-          <section className="section section--intro">
+          <Section className="section--intro">
             <h1 className="heading">Brian Han</h1>
-            <p className="body-text">
+            <Text>
               Front-end developer at{' '}
               <InlineLink href="https://console.bluemix.net/">IBM Bluemix</InlineLink> and{' '}
               <InlineLink href="http://carbondesignsystem.com/">
                 Carbon Design System
               </InlineLink>.
-            </p>
-            <p className="body-text">Based in Austin, TX.</p>
-          </section>
+            </Text>
+            <Text>Based in Austin, TX.</Text>
+          </Section>
 
-          <section className="section section--contact">
+          <Section className="section--contact">
             <h2 className="heading">Contact</h2>
-            <p className="body-text">thisisbrianhan@gmail.com</p>
+            <Text>thisisbrianhan@gmail.com</Text>
             <div className="icon-container">
               <a href="https://github.com/hellobrian">
                 <Icon
@@ -71,7 +73,7 @@ class App extends Component {
                 />
               </a>
             </div>
-          </section>
+          </Section>
         </div>;
   }
 }
