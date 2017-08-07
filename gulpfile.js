@@ -15,8 +15,11 @@ gulp.task('sass:build', () => {
     )
     .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('sass:watch', ['sass:build'], () => {
+  gulp.watch('src/**/*.scss', ['sass:build']);
 });
 
 gulp.task('serve', ['sass:build'], () => {
