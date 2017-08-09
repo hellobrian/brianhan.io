@@ -27,6 +27,7 @@ class Icon extends Component {
   };
 
   static defaultProps = {
+    pathData: '',
     title: 'icon',
     description: '',
     viewBox: '0 0 32 32',
@@ -36,11 +37,12 @@ class Icon extends Component {
   };
 
   renderPath = iconName => {
-    return iconName !== '' ? DATA[iconName] : pathData;
+    return iconName !== '' ? DATA[iconName] : this.props.pathData;
   };
 
   render() {
     const {
+      pathData,
       fill,
       viewBox,
       width,

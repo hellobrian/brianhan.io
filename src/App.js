@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Icon from './Icon';
-import InlineLink from './InlineLink';
-import Text from './Text';
-import Section from './Section';
+import Icon from './components/Icon';
+import InlineLink from './components/InlineLink';
+import Text from './components/Text';
+import Section from './components/Section';
+import './main.css';
 
 class App extends Component {
   state = {
@@ -15,7 +16,7 @@ class App extends Component {
   render() {
     return this.state.isLoading
       ? <div>Loading...</div>
-      : <div>
+      : <div className="layout">
           <Section className="section--intro">
             <h1 className="heading">Brian Han</h1>
             <Text>
