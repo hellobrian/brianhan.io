@@ -5,7 +5,8 @@ import glamorous from 'glamorous';
 const Paragraph = glamorous.p({
   display: 'inline-block',
   fontSize: '1.15rem',
-  lineHeight: 1.2,
+  lineHeight: 1.4,
+  textAlign: 'center',
 });
 
 class Text extends Component {

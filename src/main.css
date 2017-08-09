@@ -7,10 +7,9 @@
 
 .body-text {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 15rem;
+  width: 20rem;
   margin-bottom: 1rem; }
 
 .section {
@@ -24,7 +23,6 @@
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Inconsolata', monospace;
   letter-spacing: -1px;
-  line-height: 1;
   font-size: 2rem;
   margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
@@ -38,5 +36,5 @@
 .icon-container {
   display: flex;
   justify-content: space-between;
-  width: 15rem;
+  width: 20rem;
   margin-top: 1rem; }
