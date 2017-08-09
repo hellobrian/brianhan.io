@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Brian Han",
+  "name": "Brian Han, front-end developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "blue",
-  "background_color": "blue"
+  "theme_color": "#0000FF",
+  "background_color": "#0000FF"
 }
