@@ -6,7 +6,7 @@ export default function Template({ data }) {
   // const { markdownRemark } = data; // data.markdownRemark holds our post data
   // const { frontmatter, html } = markdownRemark;
   const { markdownRemark: post } = data; // const post = data.markdownRemark;
-  console.log(post);
+
   return (
     <div className="blog-post">
       <p>{post.frontmatter.title}</p>

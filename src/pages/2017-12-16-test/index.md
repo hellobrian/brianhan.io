@@ -1,9 +1,10 @@
 ---
 path: "/blog/test"
-date: "2015-12-16"
+date: "2015-08-20"
 title: "test"
 tags: ["dev", "test"]
 excerpt: "this is a test and I'm amazing"
+published: true
 ---
 
 Gatsby uses a React component to server render the and other parts of the HTML outside of the core Gatsby application.
