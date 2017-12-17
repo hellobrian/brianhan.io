@@ -1,33 +1,34 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 export default function Template({ data }) {
-  const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark;
+  // const { markdownRemark } = data; // data.markdownRemark holds our post data
+  // const { frontmatter, html } = markdownRemark;
+  const { markdownRemark: post } = data; // const post = data.markdownRemark;
+  console.log(post);
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <p>{frontmatter.title}</p>
-        <p>{frontmatter.date}</p>
-        {html.match(/class="language/) === null ? (
+    <div className="blog-post">
+      <p>{post.frontmatter.title}</p>
+      <p>{post.frontmatter.date}</p>
+      {post.html.match(/class="language/) === null ? (
+        <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      ) : (
+        <PrismThemeWrapper>
           <div
             className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: post.html }}
           />
-        ) : (
-          <SyntaxTheme>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </SyntaxTheme>
-        )}
-      </div>
+        </PrismThemeWrapper>
+      )}
     </div>
   );
 }
 
-export const pageQuery = graphql`
+export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
@@ -35,12 +36,14 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
+        excerpt
       }
     }
   }
 `;
 
-const SyntaxTheme = styled.div`
+const PrismThemeWrapper = styled.div`
   code[class*='language-'],
   pre[class*='language-'] {
     color: #f8f8f2;

@@ -7,11 +7,9 @@ import './index.css';
 
 const Header = () => (
   <div>
-    <div>
-      <h1>
-        <Link to="/">Brian Han</Link>
-      </h1>
-    </div>
+    <h1>
+      <Link to="/">Brian Han</Link>
+    </h1>
   </div>
 );
 

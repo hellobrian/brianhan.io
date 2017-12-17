@@ -1,9 +1,10 @@
 module.exports = {
-  siteMetadata: {
-    title: `Brian Han`
-  },
+  // siteMetadata: {
+  //   title: `Brian Han`
+  // },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
