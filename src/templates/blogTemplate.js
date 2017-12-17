@@ -11,7 +11,11 @@ export default function Template({
       <div className="blog-post">
         <p>{frontmatter.title}</p>
         <p>{frontmatter.date}</p>
-        {html.match(/class="language/) ? (
+        <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        {/* {html.match(/class="language/) ? (
           <SyntaxTheme>
             <div
               className="blog-post-content"
@@ -23,7 +27,7 @@ export default function Template({
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-        )}
+        )} */}
       </div>
     </div>
   );
