@@ -13,6 +13,9 @@ const IndexPage = () => (
       <li>
         <Link to="/blog/test">Test blog</Link>
       </li>
+      <li>
+        <Link to="/blog/test2">Test 2</Link>
+      </li>
     </ul>
   </div>
 );

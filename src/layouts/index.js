@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
 // import './index.css';
-import './prism-okaidia.css';
+// import './prism-okaidia.css';
 
 const Header = () => (
   <div>

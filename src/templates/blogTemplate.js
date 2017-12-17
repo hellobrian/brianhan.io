@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Template({
-  data // this prop will be injected by the GraphQL query below.
-}) {
+export default function Template({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
@@ -11,23 +9,19 @@ export default function Template({
       <div className="blog-post">
         <p>{frontmatter.title}</p>
         <p>{frontmatter.date}</p>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        {/* {html.match(/class="language/) ? (
+        {html.match(/class="language/) === null ? (
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        ) : (
           <SyntaxTheme>
             <div
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </SyntaxTheme>
-        ) : (
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        )} */}
+        )}
       </div>
     </div>
   );
