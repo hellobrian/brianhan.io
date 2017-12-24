@@ -78,7 +78,7 @@ const HeadingLink = styled.h1`
 `;
 
 const StyledMenuIcon = styled(MenuIcon)`
-  transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
+  transform: ${props => (props.open ? "rotate(-90deg)" : "rotate(0deg)")};
   fill: ${colors.white.hex};
   transition: transform 250ms ${cubicBezier.easeOut};
   margin: 10px 8px 6px;

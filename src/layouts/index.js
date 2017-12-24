@@ -44,10 +44,22 @@ class TemplateWrapper extends Component {
         />
         <NavigationMenu open={this.state.isNavigationMenuOpen}>
           <NavigationMenuList open={this.state.isNavigationMenuOpen}>
-            <NavigationMenuListItem>Home</NavigationMenuListItem>
-            <NavigationMenuListItem>Blog</NavigationMenuListItem>
-            <NavigationMenuListItem>Uses</NavigationMenuListItem>
-            <NavigationMenuListItem>GitHub</NavigationMenuListItem>
+            <NavigationMenuListItem>
+              <Link onClick={this.toggleNavigationMenu} to="/">
+                Home
+              </Link>
+            </NavigationMenuListItem>
+            <NavigationMenuListItem>
+              <Link onClick={this.toggleNavigationMenu} to="/blog">
+                Blog
+              </Link>
+            </NavigationMenuListItem>
+            <NavigationMenuListItem>
+              <Link onClick={this.toggleNavigationMenu}>About</Link>
+            </NavigationMenuListItem>
+            <NavigationMenuListItem>
+              <Link onClick={this.toggleNavigationMenu}>GitHub</Link>
+            </NavigationMenuListItem>
           </NavigationMenuList>
         </NavigationMenu>
         <BodyContainer>{children()}</BodyContainer>
@@ -67,7 +79,7 @@ const NavigationMenu = styled.div`
   background-color: ${colors.purple.hex};
   transform: ${props => (props.open ? "scaleY(1)" : "scaleY(0)")};
   transform-origin: top;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -88,9 +100,12 @@ const NavigationMenuList = styled.ul`
 `;
 
 const NavigationMenuListItem = styled.li`
-  color: white;
-  font-size: 2rem;
-  ${fontFamily.ibm};
+  & > a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    ${fontFamily.ibm};
+  }
 `;
 
 export default TemplateWrapper;
