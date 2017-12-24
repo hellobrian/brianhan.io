@@ -32,7 +32,7 @@ class Navigation extends Component {
   render() {
     const { onButtonClick, open } = this.props;
     return (
-      <StyledHeader>
+      <StyledHeader className="StyledHeader" open={open}>
         <InnerContainer>
           {/* <HeadingLink>
         <Link className="link" to="/">
@@ -53,7 +53,8 @@ class Navigation extends Component {
 }
 
 const StyledHeader = styled.header`
-  background-color: ${colors.purple.hex};
+  background-color: ${props => (props.open ? "#7732bb" : colors.purple.hex)};
+  transition: background-color 500ms ${cubicBezier.standard};
   font-size: 1rem;
 `;
 

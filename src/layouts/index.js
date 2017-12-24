@@ -76,23 +76,23 @@ const BodyContainer = styled.div`
 const NavigationMenu = styled.div`
   position: absolute;
   z-index: 9000;
-  background-color: ${colors.purple.hex};
+  background-color: ${props => (props.open ? "#7732bb" : colors.purple.hex)};
   transform: ${props => (props.open ? "scaleY(1)" : "scaleY(0)")};
   transform-origin: top;
-  height: 80vh;
+  height: 40vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  transition: transform 250ms ${cubicBezier.standard};
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 250ms ${cubicBezier.standard},
+    background-color 500ms ${cubicBezier.standard};
 `;
 
 const NavigationMenuList = styled.ul`
-  display: block;
   opacity: ${props => (props.open ? 1 : 0)};
-  height: 500px;
-  width: 100%;
+  /* height: 500px; */
+  /* outline: 1px solid red; */
   padding: 0 2rem;
   list-style-type: none;
   transform: ${props => (props.open ? "translateX(0)" : "translateX(-1000px)")};
@@ -100,11 +100,25 @@ const NavigationMenuList = styled.ul`
 `;
 
 const NavigationMenuListItem = styled.li`
+  margin: 0.5rem 0;
+
   & > a {
     text-decoration: none;
     color: white;
     font-size: 2rem;
     ${fontFamily.ibm};
+    font-weight: 600;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    width: 90%;
+    line-height: 1.2;
+    border-left: 5px solid transparent;
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.25);
+      border-left: 5px solid white;
+      outline: none;
+    }
   }
 `;
 
