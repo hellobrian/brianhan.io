@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import styled from "styled-components";
-import { colors, buttonReset, fontFamily, rem } from "../styles";
-import MenuIcon from "../components/MenuIcon";
+import Navigation from "../components/Navigation";
+import { colors, buttonReset, fontFamily, rem, cubicBezier } from "../styles";
 
 import "./index.css";
 
 class TemplateWrapper extends Component {
+  state = {
+    isNavigationMenuOpen: false
+  };
   static propTypes = {
     children: PropTypes.func
   };
+
+  toggleNavigationMenu = () =>
+    this.setState({ isNavigationMenuOpen: !this.state.isNavigationMenuOpen });
 
   render() {
     const { children } = this.props;
@@ -32,65 +38,59 @@ class TemplateWrapper extends Component {
           href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Playfair+Display:400,700,900"
           rel="stylesheet"
         />
-        <Header />
-        <div>{children()}</div>
+        <Navigation
+          open={this.state.isNavigationMenuOpen}
+          onButtonClick={this.toggleNavigationMenu}
+        />
+        <NavigationMenu open={this.state.isNavigationMenuOpen}>
+          <NavigationMenuList open={this.state.isNavigationMenuOpen}>
+            <NavigationMenuListItem>Home</NavigationMenuListItem>
+            <NavigationMenuListItem>Blog</NavigationMenuListItem>
+            <NavigationMenuListItem>Uses</NavigationMenuListItem>
+            <NavigationMenuListItem>GitHub</NavigationMenuListItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+        <BodyContainer>{children()}</BodyContainer>
       </div>
     );
   }
 }
 
-const Header = () => (
-  <StyledHeader>
-    <InnerContainer>
-      {/* <HeadingLink>
-        <Link className="link" to="/">
-          Brian
-        </Link>
-      </HeadingLink> */}
-      <MenuButton onClick={() => console.log("hi")}>
-        <MenuIcon className="icon" />
-      </MenuButton>
-    </InnerContainer>
-  </StyledHeader>
-);
+const BodyContainer = styled.div`
+  position: relative;
+  z-index: 8000;
+`;
 
-const StyledHeader = styled.header`
+const NavigationMenu = styled.div`
+  position: absolute;
+  z-index: 9000;
   background-color: ${colors.purple.hex};
-  font-size: 1rem;
-`;
-
-const InnerContainer = styled.div`
+  transform: ${props => (props.open ? "scaleY(1)" : "scaleY(0)")};
+  transform-origin: top;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  /* justify-content: space-between; */
-  justify-content: flex-end;
-  align-items: center;
-  height: ${rem(50)};
-  padding: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: transform 250ms ${cubicBezier.standard};
 `;
 
-const HeadingLink = styled.h1`
-  display: inline-flex;
-
-  .link {
-    color: ${colors.white.hex};
-    font-size: 24px;
-    text-decoration: none;
-    ${fontFamily.ibm};
-  }
+const NavigationMenuList = styled.ul`
+  display: block;
+  opacity: ${props => (props.open ? 1 : 0)};
+  height: 500px;
+  width: 100%;
+  padding: 0 2rem;
+  list-style-type: none;
+  transform: ${props => (props.open ? "translateX(0)" : "translateX(-1000px)")};
+  transition: transform 400ms ${cubicBezier.standard};
 `;
 
-const MenuButton = styled.button`
-  display: inline-block;
-  color: ${colors.white.hex};
-  font-size: 1rem;
+const NavigationMenuListItem = styled.li`
+  color: white;
+  font-size: 2rem;
   ${fontFamily.ibm};
-  ${buttonReset};
-
-  .icon {
-    fill: ${colors.white.hex};
-    width: 30px;
-    height: 30px;
-  }
 `;
 
 export default TemplateWrapper;

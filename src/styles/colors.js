@@ -4,7 +4,7 @@ const colors = {
   },
   salmon: {
     hex: "#FA8072",
-    rgb: "rgba(250, 128, 114, 1)"
+    rgb: "rgb(250, 128, 114)"
   },
   purple: {
     hex: "#602797",
