@@ -42,31 +42,26 @@ class NavMenuTrigger extends Component {
 }
 
 const Container = styled.div`
+  position: fixed;
+  z-index: 9000;
+  width: 100%;
+  height: ${rem(60)};
   background-color: ${props =>
     props.open ? colors.purpleLight.hex : colors.purple.hex};
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 1rem;
   transition: background-color 500ms ${cubicBezier.standard};
-`;
-
-const StyledMenuIcon = styled(MenuIcon)`
-  fill: ${colors.white.hex};
-  height: ${rem(14)};
-  margin-top: ${rem(10)};
-  margin-left: ${rem(8)};
-  margin-right: ${rem(8)};
-  margin-bottom: ${rem(6)};
-  transform: ${props => (props.open ? "rotate(-90deg)" : "rotate(0deg)")};
-  transition: transform 250ms ${cubicBezier.easeOut};
-  width: 20px;
 `;
 
 const Button = styled.button`
   ${buttonReset};
   background: ${props => (props.open ? "rgba(255, 255, 255, .25)" : "none")};
   color: ${colors.white.hex};
-  display: inline-block;
+  display: inline-flex;
+  padding: ${rem(8)};
+
   font-size: 1rem;
   transition: background-color 200ms ${cubicBezier.easeOut},
     fill 200ms ${cubicBezier.easeOut};
@@ -75,6 +70,18 @@ const Button = styled.button`
   &:focus {
     outline: 1px solid ${colors.white.hex};
   }
+`;
+
+const StyledMenuIcon = styled(MenuIcon)`
+  fill: ${colors.white.hex};
+  height: ${rem(20)};
+  /* margin-top: ${rem(10)};
+  margin-left: ${rem(8)};
+  margin-right: ${rem(8)};
+  margin-bottom: ${rem(6)}; */
+  transform: ${props => (props.open ? "rotate(-90deg)" : "rotate(0deg)")};
+  transition: transform 250ms ${cubicBezier.easeOut};
+  width: 20px;
 `;
 
 export default NavMenuTrigger;

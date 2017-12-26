@@ -56,6 +56,7 @@ const LayoutContainer = styled.div`
 const BodyContainer = styled.div`
   position: relative;
   z-index: 8000;
+  padding-top: ${rem(60)};
 `;
 
 export default TemplateWrapper;

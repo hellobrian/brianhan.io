@@ -44,8 +44,9 @@ class NavMenu extends Component {
 }
 
 const NavMenuContainer = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 9000;
+  top: ${rem(60)};
   background-color: ${props =>
     props.open ? colors.purpleLight.hex : colors.purple.hex};
   transform: ${props => (props.open ? "scaleY(1)" : "scaleY(0)")};
@@ -55,7 +56,6 @@ const NavMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   transition: transform 250ms ${cubicBezier.standard},
     background-color 500ms ${cubicBezier.standard};
 `;
@@ -64,9 +64,10 @@ const NavMenuList = styled.ul`
   opacity: ${props => (props.open ? 1 : 0)};
   padding: 0 2rem;
   list-style-type: none;
-  height: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   li {
     transform: ${props =>
