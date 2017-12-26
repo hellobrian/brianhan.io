@@ -13,14 +13,12 @@ import MenuIcon from "../MenuIcon";
 class NavMenuTrigger extends Component {
   static propTypes = {
     open: PropTypes.bool,
-    onButtonClick: PropTypes.func,
-    onClick: PropTypes.func
+    onButtonClick: PropTypes.func
   };
 
   static defaultProps = {
     open: false,
-    onButtonClick: () => {},
-    onClick: () => {}
+    onButtonClick: () => {}
   };
 
   componentWillReceiveProps(nextProps) {
@@ -57,31 +55,56 @@ const Container = styled.div`
 
 const Button = styled.button`
   ${buttonReset};
+  ${fontFamily.ibm};
   background: ${props => (props.open ? "rgba(255, 255, 255, .25)" : "none")};
+  border-radius: 50%;
+  border: 1px solid transparent;
   color: ${colors.white.hex};
   display: inline-flex;
   padding: ${rem(8)};
-
   font-size: 1rem;
   transition: background-color 200ms ${cubicBezier.easeOut},
     fill 200ms ${cubicBezier.easeOut};
-  ${fontFamily.ibm};
 
   &:focus {
-    outline: 1px solid ${colors.white.hex};
+    border: 1px solid ${colors.white.hex};
+    outline: none;
   }
 `;
 
 const StyledMenuIcon = styled(MenuIcon)`
   fill: ${colors.white.hex};
   height: ${rem(20)};
-  /* margin-top: ${rem(10)};
-  margin-left: ${rem(8)};
-  margin-right: ${rem(8)};
-  margin-bottom: ${rem(6)}; */
-  transform: ${props => (props.open ? "rotate(-90deg)" : "rotate(0deg)")};
-  transition: transform 250ms ${cubicBezier.easeOut};
   width: 20px;
+
+  rect {
+    transition: transform 200ms ${cubicBezier.easeOut},
+      height 200ms ${cubicBezier.easeOut}, width 200ms ${cubicBezier.easeOut};
+  }
+
+  .rect1 {
+    width: ${props => (props.open ? "24px" : "20px")};
+    height: ${props => (props.open ? "3.15px" : "2px")};
+
+    transform: ${props =>
+      props.open
+        ? "rotate(45deg) translateY(-3.65px) translateX(0px)"
+        : "rotate(0deg) translateY(0px) translateX(0px)"};
+  }
+
+  .rect2 {
+    transform: ${props =>
+      props.open ? "translateX(100%)" : "translateX(0px)"};
+  }
+
+  .rect3 {
+    width: ${props => (props.open ? "24px" : "20px")};
+    height: ${props => (props.open ? "3.15px" : "2px")};
+    transform: ${props =>
+      props.open
+        ? "rotate(-45deg) translateY(-1.5px) translateX(-9.85px)"
+        : "rotate(0deg) translateY(0px) translateX(0px)"};
+  }
 `;
 
 export default NavMenuTrigger;

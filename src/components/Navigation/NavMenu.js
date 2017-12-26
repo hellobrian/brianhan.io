@@ -18,22 +18,22 @@ class NavMenu extends Component {
       <NavMenuContainer open={open}>
         <NavMenuList open={open}>
           <NavMenuListItem order={1}>
-            <Link onClick={onClick} to="/">
+            <Link onClick={onClick} to="/" tabIndex={open ? 0 : -1}>
               Home
             </Link>
           </NavMenuListItem>
           <NavMenuListItem order={2}>
-            <Link onClick={onClick} to="/blog">
+            <Link onClick={onClick} to="/blog" tabIndex={open ? 0 : -1}>
               Blog
             </Link>
           </NavMenuListItem>
           <NavMenuListItem order={3}>
-            <Link onClick={onClick} to="/">
+            <Link onClick={onClick} to="/" tabIndex={open ? 0 : -1}>
               About
             </Link>
           </NavMenuListItem>
           <NavMenuListItem order={4}>
-            <Link onClick={onClick} to="/">
+            <Link onClick={onClick} to="/" tabIndex={open ? 0 : -1}>
               GitHub
             </Link>
           </NavMenuListItem>
@@ -79,7 +79,7 @@ const NavMenuListItem = styled.li`
   width: 100%;
   margin: 0.5rem 0;
   transition: ${props =>
-    props.order && `transform ${props.order * 100}ms ${cubicBezier.standard}`};
+    props.order && `transform ${props.order * 125}ms ${cubicBezier.standard}`};
 
   & > a {
     display: inline-block;
