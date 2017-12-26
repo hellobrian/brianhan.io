@@ -10,6 +10,9 @@ const colors = {
     hex: "#602797",
     rgb: "rgb(96, 39, 151)"
   },
+  purpleLight: {
+    hex: "#7732bb"
+  },
   white: {
     hex: "#fff"
   }

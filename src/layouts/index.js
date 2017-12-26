@@ -3,26 +3,26 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import Navigation from "../components/Navigation";
+import { NavMenu, NavMenuTrigger } from "../components/Navigation";
 import { colors, buttonReset, fontFamily, rem, cubicBezier } from "../styles";
 
 import "./index.css";
 
 class TemplateWrapper extends Component {
   state = {
-    isNavigationMenuOpen: false
+    isNavMenuOpen: false
   };
   static propTypes = {
     children: PropTypes.func
   };
 
-  toggleNavigationMenu = () =>
-    this.setState({ isNavigationMenuOpen: !this.state.isNavigationMenuOpen });
+  toggleNavMenu = () =>
+    this.setState({ isNavMenuOpen: !this.state.isNavMenuOpen });
 
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <LayoutContainer open={this.state.isNavMenuOpen}>
         <Helmet
           title="Brian Han"
           meta={[
@@ -38,88 +38,24 @@ class TemplateWrapper extends Component {
           href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Playfair+Display:400,700,900"
           rel="stylesheet"
         />
-        <Navigation
-          open={this.state.isNavigationMenuOpen}
-          onButtonClick={this.toggleNavigationMenu}
+        <NavMenuTrigger
+          onButtonClick={this.toggleNavMenu}
+          open={this.state.isNavMenuOpen}
         />
-        <NavigationMenu open={this.state.isNavigationMenuOpen}>
-          <NavigationMenuList open={this.state.isNavigationMenuOpen}>
-            <NavigationMenuListItem>
-              <Link onClick={this.toggleNavigationMenu} to="/">
-                Home
-              </Link>
-            </NavigationMenuListItem>
-            <NavigationMenuListItem>
-              <Link onClick={this.toggleNavigationMenu} to="/blog">
-                Blog
-              </Link>
-            </NavigationMenuListItem>
-            <NavigationMenuListItem>
-              <Link onClick={this.toggleNavigationMenu}>About</Link>
-            </NavigationMenuListItem>
-            <NavigationMenuListItem>
-              <Link onClick={this.toggleNavigationMenu}>GitHub</Link>
-            </NavigationMenuListItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <NavMenu open={this.state.isNavMenuOpen} onClick={this.toggleNavMenu} />
         <BodyContainer>{children()}</BodyContainer>
-      </div>
+      </LayoutContainer>
     );
   }
 }
 
+const LayoutContainer = styled.div`
+  height: 500vh;
+`;
+
 const BodyContainer = styled.div`
   position: relative;
   z-index: 8000;
-`;
-
-const NavigationMenu = styled.div`
-  position: absolute;
-  z-index: 9000;
-  background-color: ${props => (props.open ? "#7732bb" : colors.purple.hex)};
-  transform: ${props => (props.open ? "scaleY(1)" : "scaleY(0)")};
-  transform-origin: top;
-  height: 40vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  transition: transform 250ms ${cubicBezier.standard},
-    background-color 500ms ${cubicBezier.standard};
-`;
-
-const NavigationMenuList = styled.ul`
-  opacity: ${props => (props.open ? 1 : 0)};
-  /* height: 500px; */
-  /* outline: 1px solid red; */
-  padding: 0 2rem;
-  list-style-type: none;
-  transform: ${props => (props.open ? "translateX(0)" : "translateX(-1000px)")};
-  transition: transform 400ms ${cubicBezier.standard};
-`;
-
-const NavigationMenuListItem = styled.li`
-  margin: 0.5rem 0;
-
-  & > a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    ${fontFamily.ibm};
-    font-weight: 600;
-    padding-left: 1rem;
-    padding-right: 2rem;
-    width: 90%;
-    line-height: 1.2;
-    border-left: 5px solid transparent;
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.25);
-      border-left: 5px solid white;
-      outline: none;
-    }
-  }
 `;
 
 export default TemplateWrapper;
