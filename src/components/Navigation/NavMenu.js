@@ -92,11 +92,11 @@ const NavMenuListItem = styled.li`
     padding-right: 2rem;
     width: 100%;
     line-height: 1.5;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.25);
-      border: 1px solid white;
+      border: 2px solid white;
       outline: none;
     }
   }

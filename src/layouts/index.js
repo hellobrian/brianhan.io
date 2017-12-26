@@ -54,6 +54,7 @@ const LayoutContainer = styled.div`
 `;
 
 const BodyContainer = styled.div`
+  background-color: ${colors.purple.hex};
   position: relative;
   z-index: 8000;
   padding-top: ${rem(60)};

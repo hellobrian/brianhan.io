@@ -42,7 +42,8 @@ class NavMenuTrigger extends Component {
 const Container = styled.div`
   position: fixed;
   z-index: 9000;
-  width: 100%;
+  /* width: 100%; */
+  right: 0;
   height: ${rem(60)};
   background-color: ${props =>
     props.open ? colors.purpleLight.hex : colors.purple.hex};
@@ -61,13 +62,13 @@ const Button = styled.button`
   border: 1px solid transparent;
   color: ${colors.white.hex};
   display: inline-flex;
-  padding: ${rem(8)};
+  padding: ${rem(6)};
   font-size: 1rem;
   transition: background-color 200ms ${cubicBezier.easeOut},
     fill 200ms ${cubicBezier.easeOut};
 
   &:focus {
-    border: 1px solid ${colors.white.hex};
+    border: 2px solid ${colors.white.hex};
     outline: none;
   }
 `;
@@ -76,7 +77,11 @@ const StyledMenuIcon = styled(MenuIcon)`
   fill: ${colors.white.hex};
   height: ${rem(20)};
   width: 20px;
-
+  transform: ${props =>
+    props.open
+      ? "translateX(0.1px) translateY(0px)"
+      : "translateX(0px) translateY(0px)"};
+  transition: transform 200ms ${cubicBezier.easeOut};
   rect {
     transition: transform 200ms ${cubicBezier.easeOut},
       height 200ms ${cubicBezier.easeOut}, width 200ms ${cubicBezier.easeOut};
@@ -84,7 +89,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 
   .rect1 {
     width: ${props => (props.open ? "24px" : "20px")};
-    height: ${props => (props.open ? "3.15px" : "2px")};
+    height: ${props => (props.open ? rem(3.15) : "2px")};
 
     transform: ${props =>
       props.open
@@ -99,7 +104,7 @@ const StyledMenuIcon = styled(MenuIcon)`
 
   .rect3 {
     width: ${props => (props.open ? "24px" : "20px")};
-    height: ${props => (props.open ? "3.15px" : "2px")};
+    height: ${props => (props.open ? rem(3.15) : "2px")};
     transform: ${props =>
       props.open
         ? "rotate(-45deg) translateY(-1.5px) translateX(-9.85px)"
