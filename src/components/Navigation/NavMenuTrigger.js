@@ -59,7 +59,7 @@ const Button = styled.button`
   ${fontFamily.ibm};
   background: ${props => (props.open ? "rgba(255, 255, 255, .25)" : "none")};
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: ${colors.white.hex};
   display: inline-flex;
   padding: ${rem(6)};

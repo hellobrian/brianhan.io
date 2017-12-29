@@ -93,6 +93,7 @@ const NavMenuListItem = styled.li`
     width: 100%;
     line-height: 1.5;
     border: 2px solid transparent;
+    letter-spacing: ${rem(-0.5)};
 
     &:focus {
       background-color: rgba(255, 255, 255, 0.25);
