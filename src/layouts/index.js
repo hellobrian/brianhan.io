@@ -12,6 +12,7 @@ class TemplateWrapper extends Component {
   state = {
     isNavMenuOpen: false
   };
+
   static propTypes = {
     children: PropTypes.func
   };
@@ -43,21 +44,25 @@ class TemplateWrapper extends Component {
           open={this.state.isNavMenuOpen}
         />
         <NavMenu open={this.state.isNavMenuOpen} onClick={this.toggleNavMenu} />
-        <BodyContainer>{children()}</BodyContainer>
+        <BodyContainer open={this.state.isNavMenuOpen}>
+          {children()}
+        </BodyContainer>
       </LayoutContainer>
     );
   }
 }
 
 const LayoutContainer = styled.div`
-  height: 500vh;
+  /* height: 100vh; */
 `;
 
 const BodyContainer = styled.div`
-  background-color: ${colors.purple.hex};
+  background-color: ${props =>
+    props.open ? colors.purpleLight.hex : colors.purple.hex};
   position: relative;
   z-index: 8000;
   padding-top: ${rem(60)};
+  transition: background-color 500ms ${cubicBezier.standard};
 `;
 
 export default TemplateWrapper;

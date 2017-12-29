@@ -11,8 +11,4 @@ const cubicBezier = {
   easeIn: `cubic-bezier(0.25, 0, 1, 1)`
 };
 
-const rem = px => `
-  ${px / 16}rem;
-`;
-
-export { buttonReset, rem, cubicBezier };
+export { buttonReset, cubicBezier };

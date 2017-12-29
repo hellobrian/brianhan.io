@@ -79,7 +79,7 @@ const NavMenuListItem = styled.li`
   width: 100%;
   margin: 0.5rem 0;
   transition: ${props =>
-    props.order && `transform ${props.order * 125}ms ${cubicBezier.standard}`};
+    props.order && `transform ${props.order * 200}ms ${cubicBezier.standard}`};
 
   & > a {
     display: inline-block;
