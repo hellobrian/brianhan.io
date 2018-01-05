@@ -115,7 +115,7 @@ const ProfilePic = styled.img`
 const Name = styled.h1`
   color: ${colors.white.hex};
   color: turquoise;
-  font-size: ${rem(40)};
+  font-size: ${rem(46)};
   ${fontFamily.ibm};
   line-height: 1;
   margin-top: -10px;
@@ -126,6 +126,15 @@ const Name = styled.h1`
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 500px) {
+    font-size: ${rem(60)};
+    letter-spacing: -2px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: ${rem(20)};
   }
 `;
 
@@ -149,6 +158,15 @@ const Blurb = styled.p`
   margin-bottom: ${rem(20)};
   letter-spacing: -0.001px;
   width: 195px;
+
+  @media screen and (min-width: 500px) {
+    font-size: ${rem(24)};
+    width: 250px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: ${rem(40)};
+  }
 `;
 
 const GoldText = styled.p`

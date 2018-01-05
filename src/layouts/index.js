@@ -54,6 +54,8 @@ class TemplateWrapper extends Component {
 
 const LayoutContainer = styled.div`
   /* height: 100vh; */
+  background-color: ${props =>
+    props.open ? colors.purpleLight.hex : colors.purple.hex};
 `;
 
 const BodyContainer = styled.div`

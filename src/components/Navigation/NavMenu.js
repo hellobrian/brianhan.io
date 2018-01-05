@@ -11,6 +11,16 @@ import {
   cubicBezier
 } from "../../styles";
 
+const NavItem = ({ open, onClick, order, route, routeName, ...other }) => {
+  return (
+    <NavMenuListItem order={order}>
+      <Link onClick={onClick} to={route} tabIndex={open ? 0 : -1}>
+        {routeName}
+      </Link>
+    </NavMenuListItem>
+  );
+};
+
 class NavMenu extends Component {
   render() {
     const { open, onClick } = this.props;
@@ -22,7 +32,7 @@ class NavMenu extends Component {
               Home
             </Link>
           </NavMenuListItem>
-          <NavMenuListItem order={2}>
+          {/* <NavMenuListItem order={2}>
             <Link onClick={onClick} to="/blog" tabIndex={open ? 0 : -1}>
               Blog
             </Link>
@@ -31,11 +41,33 @@ class NavMenu extends Component {
             <Link onClick={onClick} to="/" tabIndex={open ? 0 : -1}>
               About
             </Link>
+          </NavMenuListItem> */}
+          <NavMenuListItem order={2}>
+            <a
+              // onClick={onClick}
+              href="https://github.com/hellobrian"
+              tabIndex={open ? 0 : -1}
+            >
+              GitHub
+            </a>
+          </NavMenuListItem>
+          <NavMenuListItem order={3}>
+            <a
+              // onClick={onClick}
+              href="https://www.linkedin.com/in/hellobrian/"
+              tabIndex={open ? 0 : -1}
+            >
+              LinkedIn
+            </a>
           </NavMenuListItem>
           <NavMenuListItem order={4}>
-            <Link onClick={onClick} to="/" tabIndex={open ? 0 : -1}>
-              GitHub
-            </Link>
+            <a
+              // onClick={onClick}
+              href="https://twitter.com/_brianhan"
+              tabIndex={open ? 0 : -1}
+            >
+              Twitter
+            </a>
           </NavMenuListItem>
         </NavMenuList>
       </NavMenuContainer>
