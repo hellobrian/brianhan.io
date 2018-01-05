@@ -41,12 +41,11 @@ class NavMenuTrigger extends Component {
 
 const Container = styled.div`
   position: fixed;
-  z-index: 9000;
+  z-index: 9999;
   /* width: 100%; */
   right: 0;
   height: ${rem(60)};
-  background-color: ${props =>
-    props.open ? colors.purpleLight.hex : colors.purple.hex};
+  background: transparent;
   display: flex;
   justify-content: flex-end;
   align-items: center;

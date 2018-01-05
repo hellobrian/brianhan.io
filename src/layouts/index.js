@@ -63,6 +63,10 @@ const BodyContainer = styled.div`
   z-index: 8000;
   padding-top: ${rem(60)};
   transition: background-color 500ms ${cubicBezier.standard};
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  padding: 1rem;
 `;
 
 export default TemplateWrapper;

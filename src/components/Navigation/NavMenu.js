@@ -46,16 +46,19 @@ class NavMenu extends Component {
 const NavMenuContainer = styled.div`
   position: fixed;
   z-index: 9000;
-  top: ${rem(60)};
+  top: 0;
+  /* top: ${rem(60)}; */
   background-color: ${props =>
     props.open ? colors.purpleLight.hex : colors.purple.hex};
   transform: ${props => (props.open ? "scaleY(1)" : "scaleY(0)")};
   transform-origin: top;
-  height: 100%;
+  /* height: 100%; */
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: transform 250ms ${cubicBezier.standard},
     background-color 500ms ${cubicBezier.standard};
 `;
