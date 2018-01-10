@@ -1,15 +1,27 @@
 ---
 path: "/blog/ibm"
 date: "2017-12-20"
-title: "When I decided to leave IBM"
+title: "Leaving IBM"
 tags: ["ibm"]
 excerpt: "..."
 published: false
 ---
 
-> I worked at IBM for over 3 years and now I don't. I decided to quit very intentionally knowing that the next job I take would be harder, and possibly more problematic.
+> I worked at IBM for over 3 years and now I don't. Is the grass any greener on the other side? I realize now that grass is just grass and it's on me to make it greener. 
 
-So, why did I quit?
+## First things first
+
+Some gratitude is due: IBM was my first job as a front-end developer. 
+Out of all my peers from my coding bootcamp who found jobs, I was probably one of the last to get hired. I knew that I wanted to code for a living because it just felt awesome to solve problems, even better to make something that helped solve a problem for someone else. Everything else I had tried professionally felt like a deadend. Getting hired at IBM was a big deal for me and I'm very grateful that I got to do some good work there.
+
+## Actively making my job better
+
+I walked out and moved teams cuz I didn't want to work on anymore bullshit that wasn't going anywhere
+
+
+
+
+notes: [Carbon Design System](http://carbondesignsystem.com/)
 
 Maybe a better question is, why did I stick around for as long as I did?
 
