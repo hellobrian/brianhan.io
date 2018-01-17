@@ -1,25 +1,33 @@
 ---
 path: "/blog/ibm"
 date: "2017-12-20"
-title: "Leaving IBM"
+title: "10 Quick Thoughts on Leaving IBM"
 tags: ["ibm"]
-excerpt: "..."
+excerpt: "I worked at IBM for over 3 years and now I don't. Is the grass any greener on the other side? I realize now that grass is just grass and it's on me to make it greener"
 published: false
 ---
 
-> I worked at IBM for over 3 years and now I don't. Is the grass any greener on the other side? I realize now that grass is just grass and it's on me to make it greener. 
+## Getting my foot in the door
 
-## First things first
+IBM was my first job as a front-end developer.
+It feels like I learned everything I know from working with the amazing people at this company.
 
-Some gratitude is due: IBM was my first job as a front-end developer. 
 Out of all my peers from my coding bootcamp who found jobs, I was probably one of the last to get hired. I knew that I wanted to code for a living because it just felt awesome to solve problems, even better to make something that helped solve a problem for someone else. Everything else I had tried professionally felt like a deadend. Getting hired at IBM was a big deal for me and I'm very grateful that I got to do some good work there.
 
 ## Actively making my job better
 
-I walked out and moved teams cuz I didn't want to work on anymore bullshit that wasn't going anywhere
+I was placed on a design team focused on DevOps and I was asked to be on bi-monthly phone calls with a team working on plugins for Eclipse. Every meeting was unproductive and blocked. I walked out. I told them "We've been having the same meeting twice a month and every month we decide that no action is going to happen. I'm out."
 
+I saw this other actual project happening at the other end of the hall.
+It was a product rebranding of Bluemix (IBM Cloud) and I understood that the work coming from that effort was going to spawn a design system for this product.
 
+I physically moved my desk from my DevOps team to the other end of the room and said, I work here now.
 
+At least that's how I remember it.
+
+No one told me to leave, or move my desk back.
+
+I think my managers spoke privately about what happened and I eventually joined this other team.
 
 notes: [Carbon Design System](http://carbondesignsystem.com/)
 
