@@ -1,0 +1,2 @@
+webpackJsonp([0xa83d53c1aec0],{377:function(e,t){e.exports={data:{markdownRemark:{html:"<h2>Getting my foot in the door</h2>\n<h2>Actively making my job better</h2>",frontmatter:{date:"December 20, 2017",path:"/blog/ibm",title:"10 Quick Thoughts on Leaving IBM",tags:["ibm"],excerpt:"I worked at IBM for over 3 years and now I don't. Is the grass any greener on the other side? I realize now that grass is just grass and it's on me to make it greener"}}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-ibm-a43f91d766f1a52680f9.js.map

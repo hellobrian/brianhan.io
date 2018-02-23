@@ -1,0 +1,2 @@
+webpackJsonp([49683490770531],{379:function(e,t){e.exports={data:{allMarkdownRemark:{edges:[{node:{id:"/Users/brianhan/dev/hellobrian.github.io/src/pages/2017-12-16-test2/index.md absPath of file >>> MarkdownRemark",frontmatter:{date:"December 16, 2016",path:"/blog/test2",title:"test2"}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-3832212520c4ab7efdd1.js.map

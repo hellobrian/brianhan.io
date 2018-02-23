@@ -1,0 +1,2 @@
+webpackJsonp([0xb2dc932423fc],{378:function(t,e){t.exports={data:{markdownRemark:{html:"<p>Hi there, no styled.divs here I think</p>",frontmatter:{date:"December 16, 2016",path:"/blog/test2",title:"test2",tags:["dev","test"],excerpt:"this is a test and I'm amazing"}}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-test-2-0a24d71ab7dc1f10b166.js.map

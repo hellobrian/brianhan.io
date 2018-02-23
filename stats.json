@@ -1,0 +1,78 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-b36d73645e2441b0578e.js",
+      "component---src-pages-index-js-b36d73645e2441b0578e.js.map"
+    ],
+    "path---blog": [
+      "path---blog-3832212520c4ab7efdd1.js",
+      "path---blog-3832212520c4ab7efdd1.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-2ed1946be8b635e18108.js",
+      "component---src-layouts-index-js-2ed1946be8b635e18108.js.map"
+    ],
+    "component---src-templates-blog-template-js": [
+      "component---src-templates-blog-template-js-ad539991c046a8fe5fe6.js",
+      "component---src-templates-blog-template-js-ad539991c046a8fe5fe6.js.map"
+    ],
+    "path---page-2": [
+      "path---page-2-a0e39f21c11f6a62c5ab.js",
+      "path---page-2-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-page-3-js": [
+      "component---src-pages-page-3-js-da534369474473f65067.js",
+      "component---src-pages-page-3-js-da534369474473f65067.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
+    ],
+    "commons": [
+      "commons-084505cd4fd6b32f6bf7.js",
+      "commons-084505cd4fd6b32f6bf7.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---blog-ibm": [
+      "path---blog-ibm-a43f91d766f1a52680f9.js",
+      "path---blog-ibm-a43f91d766f1a52680f9.js.map"
+    ],
+    "path---blog-test-2": [
+      "path---blog-test-2-0a24d71ab7dc1f10b166.js",
+      "path---blog-test-2-0a24d71ab7dc1f10b166.js.map"
+    ],
+    "component---src-pages-blog-js": [
+      "component---src-pages-blog-js-56c33e832ec824d24ff2.js",
+      "component---src-pages-blog-js-56c33e832ec824d24ff2.js.map"
+    ],
+    "path---page-3": [
+      "path---page-3-a0e39f21c11f6a62c5ab.js",
+      "path---page-3-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-page-2-js": [
+      "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js",
+      "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
+    ],
+    "app": [
+      "app-b8ffdb51df0aedea7327.js",
+      "build-js-styles.css",
+      "app-b8ffdb51df0aedea7327.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
