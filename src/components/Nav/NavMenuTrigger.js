@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  colors,
-  buttonReset,
-  fontFamily,
-  rem,
-  cubicBezier
-} from "../../styles";
-import MenuIcon from "../MenuIcon";
+import { colors, buttonReset, fontFamily, rem, cubicBezier } from "styles";
+import MenuIcon from "components/Nav/MenuIcon";
 
 class NavMenuTrigger extends Component {
   static propTypes = {
@@ -30,16 +24,16 @@ class NavMenuTrigger extends Component {
   render() {
     const { onButtonClick, open } = this.props;
     return (
-      <Container open={open}>
+      <Wrapper open={open}>
         <Button onClick={onButtonClick} open={open}>
           <StyledMenuIcon open={open} />
         </Button>
-      </Container>
+      </Wrapper>
     );
   }
 }
 
-const Container = styled.div`
+const Wrapper = styled.div`
   position: fixed;
   z-index: 9999;
   /* width: 100%; */

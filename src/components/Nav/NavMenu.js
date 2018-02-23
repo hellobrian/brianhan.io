@@ -3,13 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import {
-  colors,
-  buttonReset,
-  fontFamily,
-  rem,
-  cubicBezier
-} from "../../styles";
+import { colors, buttonReset, fontFamily, rem, cubicBezier } from "styles";
 
 const NavItem = ({ open, onClick, order, route, routeName, ...other }) => {
   return (
@@ -32,28 +26,13 @@ class NavMenu extends Component {
               Home
             </Link>
           </NavMenuListItem>
-          {/* <NavMenuListItem order={2}>
-            <Link onClick={onClick} to="/blog" tabIndex={open ? 0 : -1}>
-              Blog
-            </Link>
-          </NavMenuListItem>
-          <NavMenuListItem order={3}>
-            <Link onClick={onClick} to="/" tabIndex={open ? 0 : -1}>
-              About
-            </Link>
-          </NavMenuListItem> */}
           <NavMenuListItem order={2}>
-            <a
-              // onClick={onClick}
-              href="https://github.com/hellobrian"
-              tabIndex={open ? 0 : -1}
-            >
+            <a href="https://github.com/hellobrian" tabIndex={open ? 0 : -1}>
               GitHub
             </a>
           </NavMenuListItem>
           <NavMenuListItem order={3}>
             <a
-              // onClick={onClick}
               href="https://www.linkedin.com/in/hellobrian/"
               tabIndex={open ? 0 : -1}
             >
@@ -61,11 +40,7 @@ class NavMenu extends Component {
             </a>
           </NavMenuListItem>
           <NavMenuListItem order={4}>
-            <a
-              // onClick={onClick}
-              href="https://twitter.com/_brianhan"
-              tabIndex={open ? 0 : -1}
-            >
+            <a href="https://twitter.com/_brianhan" tabIndex={open ? 0 : -1}>
               Twitter
             </a>
           </NavMenuListItem>

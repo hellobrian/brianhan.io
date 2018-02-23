@@ -1,12 +1,12 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import React from "react";
+import Helmet from "react-helmet";
+import styled from "styled-components";
 
 export default function Template({ data }) {
   // const { markdownRemark } = data; // data.markdownRemark holds our post data
   // const { frontmatter, html } = markdownRemark;
   const { markdownRemark: post } = data; // const post = data.markdownRemark;
-
+  console.log(post);
   return (
     <div className="blog-post">
       <p>{post.frontmatter.title}</p>
@@ -44,12 +44,12 @@ export const postQuery = graphql`
 `;
 
 const PrismThemeWrapper = styled.div`
-  code[class*='language-'],
-  pre[class*='language-'] {
+  code[class*="language-"],
+  pre[class*="language-"] {
     color: #f8f8f2;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -68,20 +68,20 @@ const PrismThemeWrapper = styled.div`
   }
 
   /* Code blocks */
-  pre[class*='language-'] {
+  pre[class*="language-"] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
     border-radius: 0.3em;
   }
 
-  :not(pre) > code[class*='language-'],
-  pre[class*='language-'] {
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
     background: #272822;
   }
 
   /* Inline code */
-  :not(pre) > code[class*='language-'] {
+  :not(pre) > code[class*="language-"] {
     padding: 0.1em;
     border-radius: 0.3em;
     white-space: normal;

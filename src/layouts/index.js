@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import { NavMenu, NavMenuTrigger } from "../components/Navigation";
-import { colors, buttonReset, fontFamily, rem, cubicBezier } from "../styles";
+import { NavMenu, NavMenuTrigger } from "components/Nav";
+import { colors, buttonReset, fontFamily, rem, cubicBezier } from "styles";
 
-import "./index.css";
+import "layouts/index.css";
 
 class TemplateWrapper extends Component {
   state = {

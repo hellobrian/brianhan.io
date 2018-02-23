@@ -7,6 +7,15 @@ import carbon from "../img/carbon.png";
 const GRAVATAR_URL =
   "https://avatars1.githubusercontent.com/u/4185382?s=460&v=4";
 
+const Svg = styled.svg`
+  height: 0;
+  left: -9999px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 0;
+`;
+
 const Filter = () => (
   <Svg>
     <filter id="profile-filter">
@@ -34,76 +43,43 @@ const Filter = () => (
   </Svg>
 );
 
-const Svg = styled.svg`
-  height: 0;
-  left: -9999px;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  width: 0;
-`;
-
 const IndexPage = () => {
   return (
-    <Container>
+    <Wrapper>
       <Filter />
-      <ProfilePicContainer>
+      <ProfilePicWrapper>
         <ProfilePic src={GRAVATAR_URL} alt="Brian Han" />
-      </ProfilePicContainer>
+      </ProfilePicWrapper>
       <Name>Brian Han</Name>
-      <BlurbContainer>
+      <BlurbWrapper>
         <Blurb>
-          <GoldText>Front-end developer</GoldText> I use code to build and
-          design things for the internet.
+          <GoldText>Front-end developer</GoldText>
         </Blurb>
         <Blurb>
-          Previously at IBM making{" "}
+          Previously at IBM working on{" "}
           <PinkLink href="http://carbondesignsystem.com/">
             Carbon Design System
           </PinkLink>. Currently at Accenture.
         </Blurb>
-        {/* <Blurb>
-          <Highlight>IBM</Highlight>: core contributor for{" "}
-          <PinkLink href="http://carbondesignsystem.com/">
-            Carbon Design System
-          </PinkLink>, an award-winning, open-source design system adopted by
-          IBM Cloud.
-        </Blurb>
-        <Blurb>
-          Currently at <Highlight>Accenture Interactive</Highlight> in Austin,
-          Texas.
-        </Blurb> */}
-        {/* <Blurb>
-          Currently @ Accenture / Fjord in Austin, TX. Former IBMer.
-          Contributor and founding team member of Carbon Design System.
-        </Blurb> */}
-      </BlurbContainer>
-    </Container>
+      </BlurbWrapper>
+    </Wrapper>
   );
 };
 
-const Container = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 1rem; */
-  /* padding-top: 1rem; */
   height: 100vh;
   margin-top: 2rem;
   margin-right: 2rem;
   margin-left: 2rem;
 `;
 
-const ProfilePicContainer = styled.div`
-  /* position: absolute; */
-  /* z-index: -1; */
-  /* width: 100%; */
+const ProfilePicWrapper = styled.div`
   width: ${rem(200)};
   margin: 1rem 0;
-  /* clip-path: circle(40% at 47% 46%); */
-  /* margin-left: ${rem(15)}; */
-  /* outline: 1px solid red; */
 `;
 
 const ProfilePic = styled.img`
@@ -120,8 +96,6 @@ const Name = styled.h1`
   line-height: 1;
   margin-top: -10px;
   margin-bottom: ${rem(15)};
-
-  /* font-family: "Open Sans", sans-serif; */
   letter-spacing: -1px;
 
   &:last-child {
@@ -138,13 +112,12 @@ const Name = styled.h1`
   }
 `;
 
-const BlurbContainer = styled.div`
+const BlurbWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   line-height: 1.25;
-  /* padding-left: ${rem(35.5)}; */
-  width: 75%;
+  width: 90%;
 `;
 
 const Blurb = styled.p`
@@ -180,10 +153,5 @@ const PinkLink = styled.a`
   text-decoration-color: ${colors.salmon.hex};
   ${fontFamily.ibm};
 `;
-
-// const Highlight = styled.span`
-//   color: ${colors.white.hex};
-//   /* background-color: turquoise; */
-// `;
 
 export default IndexPage;
