@@ -1,34 +1,30 @@
 {
-  "name": "brianhan.io",
+  "name": "hellobrian",
+  "description": "Personal website for Brian Han",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://hellobrian.github.io/",
-  "main": "index.js",
-  "keywords": [],
-  "author": "Brian Han",
-  "license": "ISC",
-  "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "react-scripts": "1.0.10"
-  },
+  "author": "Brian Han <thisisbrianhan@gmail.com>",
+  "license": "MIT",
+  "main": "n/a",
   "dependencies": {
-    "glamor": "^2.20.39",
-    "glamorous": "^4.1.0",
-    "node-sass-chokidar": "^0.0.3",
-    "npm-run-all": "^4.0.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "gatsby": "~1.9.138",
+    "gatsby-link": "~1.6.32",
+    "gatsby-plugin-react-helmet": "~1.0.8",
+    "gatsby-plugin-resolve-src": "~1.0.0",
+    "gatsby-plugin-styled-components": "~2.0.4",
+    "gatsby-remark-prismjs": "~1.2.11",
+    "gatsby-source-filesystem": "~1.5.11",
+    "gatsby-transformer-remark": "~1.7.25",
+    "styled-components": "~2.3.0"
+  },
+  "devDependencies": {
+    "prettier": "~1.9.2"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "prebuild": "gulp clean",
-    "build": "npm run build-css && react-scripts build",
-    "postbuild": "gulp move",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
